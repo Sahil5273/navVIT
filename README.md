@@ -1,2 +1,2 @@
 # navVIT
-"Click here to explore a sample project created to tackle the basic issues that you face in college due to not being aware of the procedures for different work related stuff.
+"Click here to explore a sample project designed to address the common challenges you face in college due to a lack of awareness about the procedures for various tasks."
