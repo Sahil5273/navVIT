@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="image.png">
-    <title>navVIT - Student Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <title>navVIT - Login</title>
     
 </head>
 <body>
@@ -14,36 +14,38 @@
         <p>Your Ultimate Student Hub</p>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Events</a>
-        <a href="#">Clubs</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-    </nav>
-
     <div class="container">
-        <h1>Welcome to navVIT!</h1>
-        <p>Discover events, join clubs, and make the most of your college life with navVIT.</p>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Upcoming Events</h3>
-                <p>Stay updated with the latest events happening around campus. Don't miss out!</p>
-            </div>
-            <div class="card">
-                <h3>Join a Club</h3>
-                <p>Find your community by joining a club that matches your interests.</p>
-            </div>
-            <div class="card">
-                <h3>Contact Us</h3>
-                <p>Have questions or suggestions? Get in touch with us anytime.</p>
-            </div>
+        <div class="login-form">
+            <h2>Login to navVIT</h2>
+            <form>
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="button" onclick="goToHomePage()">Login</button>
+            </form>
+            
+            
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+            <p><a href="#">Forgot Password?</a></p>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 navVIT. All Rights Reserved.</p>
     </footer>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
 </body>
 </html>
