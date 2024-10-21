@@ -36,14 +36,19 @@
             text-align: center;
         }
 
+         header h1,p {
+            color: #f6f8fd;
+            text-decoration-line: underline;
+        }
+
         h1 {
             color: #0a3289;
             text-decoration-line: underline;
         }
-
+/* 
         p {
             color: #161313;
-        }
+        } */
 
         .card {
             background-color: #fff;

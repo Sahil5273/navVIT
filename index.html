@@ -50,13 +50,15 @@ main {
 }
 
 footer {
+    position: fixed;
+    bottom: 5%;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
+    
     bottom: 0;
-    width: 100%;
+    width: fit-content;
 }
 </style>
 <body>
@@ -68,12 +70,34 @@ footer {
         <section class="buttons">
             <h2>Navigation</h2>
             <p>Please choose an option below:</p>
-            <a href="login/index.html" class="button">Login</a>
-            <a href="homepage/index.html" class="button">Go to Homepage</a>
+            <button type="button" class="button" onclick="taketologinpage()">Login</button>
+            <button type="button" class="button" onclick="taketohomepage()">Home Page</button>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
+
+    <script>
+
+    function taketologinpage() {
+        window.location.href= "login_page/index.html";
+    };
+
+    function taketohomepage() {
+    // Redirect to the home page
+    window.location.href = "home_page/index.html";
+    };
+
+
+
+                   
+            
+    </script>
+
+
+
+
+
 </body>
 </html>
