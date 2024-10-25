@@ -47,8 +47,54 @@
         </div>
     </div>
 
+
+
+
+
+
+
+    
+<!-- Chatbox Icon (Positioned at the bottom right corner) -->
+<div id="chatbox-icon" onclick="toggleChatbox()">
+    <img src="chatbox.png" alt="Chat Icon" class="chat-icon">
+</div>
+
+<!-- Chatbox Container (Initially hidden) -->
+<div id="chatbox-container" class="hidden">
+    <div class="chatbox">
+        <div class="chatbox-header">
+            <h2>navCHAT!</h2>
+            <span class="close-chatbox" onclick="toggleChatbox()">&#10005;</span>
+        </div>
+        <div class="chatbox-body">
+            <div class="chat-message">
+                <p>Hi! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" placeholder="Type your message..." class="chatbox-input">
+            <button class="chatbox-send">Send</button>
+        </div>
+    </div>
+</div>
+
     <footer>
         <p>&copy; 2024 navVIT. All Rights Reserved.</p>
     </footer>
+
+
+
+    
+
+
+
+
+
+     
+
+        <script src="script.js"  defer></script>
 </body>
 </html>
+
+
+
