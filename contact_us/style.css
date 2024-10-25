@@ -38,7 +38,7 @@ nav a:hover {
     margin: auto;
 }
 
-h1 {
+ div h1 {
     color: #0a3289;
     text-decoration-line: underline;
     text-align: center;
@@ -49,31 +49,24 @@ header h1, header p{
     text-decoration-line: underline;
 }
 
-section {
-    margin-bottom: 30px;
-}
-/* 
 h2 {
     color: #3b5998;
     text-decoration: underline;
-} */
-
-p {
-    color: #333;
-    line-height: 1.6;
+    margin-top: 30px;
 }
 
-ul {
+ul.team-list {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+ul.team-list li {
     background-color: #fff;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
 footer {
@@ -95,7 +88,8 @@ footer {
         font-size: 18px;
     }
     
-    ul li {
+    ul.team-list li {
         font-size: 14px;
     }
 }
+
