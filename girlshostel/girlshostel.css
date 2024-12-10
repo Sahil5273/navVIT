@@ -1,0 +1,199 @@
+/* Reset some margins and paddings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b5998; /* Darker blue background */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove padding */
+    color: #fff; /* Default text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Navbar Link Styles */
+#navbar a {
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#navbar a:hover {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+#hostel-link {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f5;
+    color: #0044cc;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}/* Details Section */
+#details {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    margin-top: 90px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Grid for Posters */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Three equal-width columns */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    grid-gap: 50px;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+/* Full-width Poster (Last Poster Takes Full Width) */
+.full-width {
+    grid-column: span 3; /* Span across all three columns */
+    grid-row: span 1; /* Ensure it occupies one row */
+    height: 300px; /* Set a fixed height */
+    background-color: #f0f0f5; /* Light background for the full-width poster */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Poster Cards */
+.card {
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 300px; /* Fixed height for images */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.card p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+
+footer {
+    color: #3b5998; /* Blue footer text */
+    background-color: #fff; /* White footer */
+    text-align: center;
+    padding: 2px 0;
+    margin-top: auto; /* Push footer to the bottom */
+    border-radius: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-rows: auto; /* Rows will adjust according to content */
+    }
+
+    .card {
+        height: auto; /* Allow cards to adjust height */
+    }
+
+    .full-width {
+        height: auto; /* Allow full-width poster to adjust height */
+    }
+}
