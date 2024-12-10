@@ -7,12 +7,10 @@
     <title>Contact Us - navVIT</title>
 </head>
 <body>
-    
-
     <div id="header">
         <nav id="navbar">
             <a href="../home_page/index.html ">Home</a>
-            <a href="../contact_us/">Details </a>
+            <a href="../Details/">Details </a>
 
             <div class="dropdown" id="hostel-dropdown">
                 <a href="#" id="hostel-link">Hostel</a>
@@ -29,6 +27,7 @@
             
         </nav>
     </div>
+    
 
     <div class="container">
         <h1>Contact Us</h1>
@@ -68,5 +67,25 @@
     <footer>
         <p>&copy; 2024 navVIT. All Rights Reserved.</p>
     </footer>
+    
+    <script>
+        const hostelLink = document.getElementById('hostel-link');
+        const hostelOptions = document.getElementById('hostel-options');
+
+        hostelLink.addEventListener('click', (e) => { 
+             e.preventDefault();
+             hostelOptions.classList.toggle('show'); // Toggle the dropdown
+          });
+
+           // Close dropdown if clicked outside
+        document.addEventListener('click', (e) => {
+                  // Check if the click is outside both the link and the dropdown content
+                   if (!hostelLink.contains(e.target) && !hostelOptions.contains(e.target)) {
+                      hostelOptions.classList.remove('show');
+                   }
+           });
+
+        
+    </script>
 </body>
 </html>
