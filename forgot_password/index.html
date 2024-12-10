@@ -92,3 +92,15 @@ a:hover {
     </div>
 </body>
 </html>
+<script>
+    document.getElementById("hostel-link").addEventListener("click", function (event) {
+        event.preventDefault();  // Prevent default link action
+        const hostelLink = document.getElementById("hostel-link");
+        const dropdown = document.getElementById("city");
+    
+        // Toggle visibility
+        hostelLink.classList.add("hidden");  // Hide the Hostel link
+        dropdown.classList.remove("hidden");  // Show the dropdown
+    });
+    
+    </script>

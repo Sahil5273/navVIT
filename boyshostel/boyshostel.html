@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Details</title>
+    <link rel="stylesheet" href="boyshostel.css">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<div id="header">
+    <nav id="navbar">
+        <a href="#">Home</a>
+        
+        <div class="dropdown" id="hostel-dropdown">
+            <a href="#" id="hostel-link">Hostel</a>
+            <div class="dropdown-content" id="hostel-options">
+                <a href="#">Girl's Hostel</a>
+                <a href="#">Boy's Hostel</a>
+            </div>
+        </div>
+    <a href="#">Clubs</a>
+    <a href="#">Details</a>
+    <a href="#">About Us</a>
+    <a href="#">Events</a>
+</nav>
+
+<!-- Details Section -->
+<div id="details">
+    <h1>HOSTEL DETAILS</h1>
+</div>
+
+<!-- Poster Grid Section -->
+<div class="grid">
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Poster 1">
+        <p>Details about Poster 1</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Poster 2">
+        <p>Details about Poster 2</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Poster 3">
+        <p>Details about Poster 3</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Poster 4">
+        <p>BLOCK-1
+           warden-dssd
+        </p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Poster 5">
+        <p>Details about Poster 5</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Poster 6">
+        <p>Details about Poster 6</p>
+    </div>
+
+    <div class="card full-width">
+        <img src="https://via.placeholder.com/900x150" alt="Poster 7">
+        <p>Details about Poster 7</p>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer id="foot">
+    <p>&copy; 2024 navVIT. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript for Hostel Dropdown -->
+<script>
+    const hostelLink = document.getElementById('hostel-link');
+    const hostelOptions = document.getElementById('hostel-options');
+    
+    hostelLink.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        hostelOptions.classList.toggle('show');  // Toggle professional dropdown
+    });
+    
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!hostelDropdown.contains(e.target)) {
+            hostelOptions.classList.remove('show');
+        }
+    });
+</script>
+
+</body>
+</html>
