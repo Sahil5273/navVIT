@@ -8,21 +8,27 @@
     <title>About Us - navVIT</title>
 </head>
 <body>
-    <header>
-        <h1>navVIT</h1>
-        <p>Your Ultimate Student Hub</p>
-        
-    </header>
-
-    <nav>
-        <a href="../home_page/index.html ">Home</a>
-        <a href="../hostel/">Hostel</a>
-        <a href="../club/">Clubs</a>
-        <a href="#">About Us</a>
-        <a href="../contact_us/index.html">Contact</a>
-
-        
-    </nav>
+    <div id="header">
+        <nav id="navbar">
+            <a href="../home_page/index.html ">Home</a>
+            
+            <div class="dropdown" id="hostel-dropdown">
+                <a href="#" id="hostel-link">Hostel</a>
+                <div class="dropdown-content" id="hostel-options">
+                    <a href="#">Girl's Hostel</a>
+                    <a href="../boyshostel/boyshostel.html">Boy's Hostel</a>
+                </div>
+                <a href="../club/index.html">Clubs</a>
+                <a href="../about_us/index.html">About Us</a>
+                <a href="../contact_us/index.html">Contact</a>
+            </div>
+            
+           
+            
+        </nav>
+    </div>
+    
+    
 
     <div class="container">
         <h1>About Us</h1>
@@ -52,5 +58,23 @@
     <footer>
         <p>&copy; 2024 navVIT. All Rights Reserved.</p>
     </footer>
+    <script>
+        const hostelLink = document.getElementById('hostel-link');
+        const hostelOptions = document.getElementById('hostel-options');
+        
+        hostelLink.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            hostelOptions.classList.toggle('show');  // Toggle professional dropdown
+        });
+        
+        // Close dropdown if clicked outside
+        document.addEventListener('click', (e) => {
+            if (!hostelDropdown.contains(e.target)) {
+                hostelOptions.classList.remove('show');
+            }
+        });
+        
+    </script>
+    
 </body>
 </html>
