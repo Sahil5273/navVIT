@@ -13,43 +13,41 @@ body {
 
 /* Navbar Styles */
 #navbar {
-    background-color: white; /* White navbar */
+    background-color: white;
     display: flex;
-    justify-content: flex-start; /* Move navbar items to the left */
+    justify-content: flex-start;
     align-items: center;
     padding: 0 15px;
-    height: 60px;
+    height: 50px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a sleek look */
+    box-sizing: border-box;
 }
 
 /* Navbar Link Styles */
 #navbar a {
-    color: #3b5998; /* Blue text for links */
+    color: #3b5998;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 10px;
     margin-left: 10px;
     margin-right: 20px;
-    transition: color 0.3s ease-in-out;
 }
 
 #navbar a:hover {
-    color: #0044cc; /* Change color on hover */
+    color: #ff6b6b;
+    font-weight: bold;
 }
 
-/* Hostel Dropdown */
+/* Dropdown Styles */
 .dropdown {
     position: relative;
 }
 
 #hostel-link {
-    position: relative;
     cursor: pointer;
 }
 
@@ -58,7 +56,7 @@ body {
     top: 100%;
     left: 0;
     background: white;
-    border: 1px solid #9d9898;
+    border: 1px solid #ccc;
     border-radius: 5px;
     min-width: 150px;
     display: none;
@@ -80,13 +78,11 @@ body {
     color: #0044cc;
 }
 
-/* Show Dropdown on Click */
-.show {
+.dropdown:hover .dropdown-content {
     display: flex;
     animation: fadeIn 0.3s ease;
 }
 
-/* Smooth Fade-in Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -96,9 +92,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Details Section */
+}/* Details Section */
 #details {
     background-color: #3b5998;
     color: white;
