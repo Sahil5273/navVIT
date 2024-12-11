@@ -45,5 +45,23 @@
     <footer>
         <p>&copy; 2024 navVIT. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const hostelLink = document.getElementById('hostel-link');
+        const hostelOptions = document.getElementById('hostel-options');
+        
+        hostelLink.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            hostelOptions.classList.toggle('show');  // Toggle professional dropdown
+        });
+        
+        // Close dropdown if clicked outside
+        document.addEventListener('click', (e) => {
+            if (!hostelDropdown.contains(e.target)) {
+                hostelOptions.classList.remove('show');
+            }
+        });
+        
+    </script>
 </body>
 </html>

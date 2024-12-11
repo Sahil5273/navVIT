@@ -101,7 +101,7 @@ body {
 }
 
  div h1 {
-    color: #0a3289;
+    color: #ffffff;
     text-decoration-line: underline;
     text-align: center;
 }
@@ -130,6 +130,21 @@ ul.team-list li {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     color: #333;
 }
+
+.location{
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    
+}
+
+/* .hover{
+    transform-box: border-box;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+} */
+
+
 footer {
     color: #3b5998; /* Blue footer text */
     background-color: #fff; /* White footer */

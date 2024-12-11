@@ -97,10 +97,12 @@ body {
     margin-top: 60px;
 }
 
-h2 {
-    color: #0a3289;
+h1 {
+    color: #ffffff;
     text-align: center;
+    text-decoration: underline;
 }
+
 
 /* Grid Styles */
 .poster-grid {

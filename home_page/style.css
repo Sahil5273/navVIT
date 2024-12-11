@@ -169,6 +169,15 @@ body {
     box-shadow: 0 10px 15px rgba(85, 36, 245, 0.3);
 }
 
+section{
+    text-align: left;
+    font-size: smaller;
+    color: aliceblue;
+    
+    
+
+
+}
 /* Footer Styles */
 footer {
     color: #3b5998;
