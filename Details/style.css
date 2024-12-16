@@ -75,7 +75,26 @@ body {
     display: flex;
     animation: fadeIn 0.3s ease;
 }
-
+/* for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
 /* Smooth Fade-in Animation */
 @keyframes fadeIn {
     from {
@@ -96,14 +115,14 @@ body {
 .container {
     
     padding: 20px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
     margin-top: 60px
 }
 
 h1 {
-    color: #0a3289;
-    text-decoration-line: underline;
+    color: #fdfdfd;
+    /* text-decoration-line: underline; */
     text-align: center;
 }
 
@@ -111,12 +130,12 @@ h1 {
 section {
     background-color: #f0f0f5;
     
-    height: 900px;
+    /* height: 900px; */
     padding: 5px;
 }
 .sec2{
     background-color: #000000;
-    height: 890px;
+    /* height: 890px; */
     padding: 5px;
     color: #e7e7ee;
     text-align: center;
@@ -161,3 +180,23 @@ footer {
         font-size: 14px;
     }
 }
+
+
+
+/* for question answer toggle */
+.question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+  }
+  .answer {
+    display: none;
+    padding: 10px;
+    background-color: #fafafa;
+    border-left: 3px solid #007BFF;
+  }
+  .question.active + .answer {
+    display: block;
+  }

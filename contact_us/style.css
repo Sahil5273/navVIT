@@ -102,7 +102,7 @@ body {
 
  div h1 {
     color: #ffffff;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
     text-align: center;
 }
 
