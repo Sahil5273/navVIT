@@ -92,7 +92,9 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}/* Details Section */
+}
+
+/* Details Section */
 #details {
     background-color: #3b5998;
     color: white;
@@ -108,25 +110,10 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-    grid-template-rows: repeat(2, auto); /* Two rows */
+    grid-template-rows: auto; /* Auto-adjust rows */
     grid-gap: 50px;
     margin-top: 70px;
     padding: 20px;
-}
-
-/* Full-width Poster (Last Poster Takes Full Width) */
-.full-width {
-    grid-column: span 3; /* Span across all three columns */
-    grid-row: span 1; /* Ensure it occupies one row */
-    height: 300px; /* Set a fixed height */
-    background-color: #f0f0f5; /* Light background for the full-width poster */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Poster Cards */
@@ -139,6 +126,7 @@ body {
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     height: 100%;
+    position: relative;
 }
 
 .card img {
@@ -164,14 +152,48 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+/* last card  */
+.full-width {
+    grid-column: span 1; /* Span across all three columns */
+     /* Consistent height with other posters */
+    height:350px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.card.show-text .card-overlay {
+    display: flex;
+}
+
+.card.show-text img {
+    display: none;
+}
+
+/* Footer */
 footer {
-    color: #3b5998; /* Blue footer text */
-    background-color: #fff; /* White footer */
+    color: #3b5998;
+    background-color: #fff;
     text-align: center;
     padding: 2px 0;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
     border-radius: 5px;
     position: relative;
     bottom: 0;
@@ -180,20 +202,7 @@ footer {
 
 /* Mobile View */
 @media (max-width: 768px) {
-    #navbar {
-        flex-direction: column;
-    }
-
     .grid {
         grid-template-columns: 1fr; /* Single column on mobile */
-        grid-template-rows: auto; /* Rows will adjust according to content */
-    }
-
-    .card {
-        height: auto; /* Allow cards to adjust height */
-    }
-
-    .full-width {
-        height: auto; /* Allow full-width poster to adjust height */
     }
 }

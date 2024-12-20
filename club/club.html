@@ -27,7 +27,7 @@
         <h1>Club Events</h1>
         <div class="poster-grid">
             <!-- Poster start -->
-            <div class="poster">
+            <div class="poster" data-date="2024-12-14">
                 <img src="posters/winter_fest.jpg" alt="Event Poster 1">
                 <!-- <a href="eventlink"> -->
                     <h3>Winter Fest</h3>
@@ -36,7 +36,7 @@
             </div>
             <!-- Poster  end  -->
             <!-- Poster start -->
-            <div class="poster">
+            <div class="poster" data-date="2024-12-16">
                 <img src="posters/poster_making_competition.jpg" alt="Event Poster 1">
                 <!-- <a href="/eventlink"> -->
                     <h3><!-- EventName -->Infographic Poster Making Competition</h3>
@@ -45,7 +45,7 @@
             </div>
             <!-- Poster  end  -->
             <!-- Poster start -->
-            <div class="poster">
+            <div class="poster" data-date="2024-12-16">
                 <img src="posters/hackathon.jpg" alt="Event Poster 1">
                 <!-- <a href="eventlink"> -->
                     <h3><!-- EventName -->Game Of Lores</h3>
@@ -54,7 +54,7 @@
             </div>
             <!-- Poster  end  -->
             <!-- Poster start -->
-            <div class="poster">
+            <div class="poster" data-date="2024-12-16">
                 <img src="posters/fourchords.jpg" alt="Event Poster 1">
                 <!-- <a href="eventlink"> -->
                     <h3><!-- EventName -->FourChords</h3>
@@ -63,7 +63,7 @@
             </div>
             <!-- Poster  end  -->
             <!-- Poster start -->
-            <div class="poster">
+            <div class="poster" data-date="2024-12-09">
                 <img src="posters/hackathon2.jpg" alt="Event Poster 1">
                 <a href="eventlink">
                     <h3><!-- EventName -->Hack4Health Hackathon</h3>
@@ -72,7 +72,7 @@
             </div>
             <!-- Poster  end  -->
              
-            <div class="poster">
+            <div class="poster" data-date="2024-11-24">
                 <img src="posters/Intercollege_Trading.jpg" alt="Event Poster 1">
                 <a href="https://community.stockgro.club/form/d0101a56-0963-4476-8a05-af2af88adb6b?utm_source=bigshot2024_intercollege__isharani&utm_medium=isharani_vitbhopaluniversity&utm_campaign=bso3_bigshot">
                     <h3>Intercollege Trading</h3>
@@ -80,31 +80,31 @@
                 <p>Date: 24 Nov 2024</p>
             </div>
             <!-- Poster 2 -->
-            <div class="poster">
+            <div class="poster" data-date="2024-11-28">
                 <img src="posters/anterstellar.jpg" alt="Event Poster 2">
                 <h3>Anterstellar</h3>
                 <p>Date: 28 Nov 2024</p>
             </div>
             <!-- Poster 3 -->
-            <div class="poster">
+            <div class="poster" data-date="2024-11-29">
                 <img src="posters/bathukamma.jpg" alt="Event Poster 3">
                 <a href="https://forms.gle/TKUzNYb63VMDMcVW9"><h3>Bathukamma</h3></a>
                 <p>Date: 29 Nov 2024</p>
             </div>
             <!-- Poster 4 -->
-            <div class="poster">
+            <div class="poster" data-date="2024-11-30">
                 <img src="posters/nature_and_trekkingclub.jpg" alt="Event Poster 4">
                 <h3>Nature And Trekking</h3>
                 <p>Date: 30 Nov 2024</p>
             </div>
             <!-- Poster 5 -->
-            <div class="poster">
+            <div class="poster" data-date="2024-12-02">
                 <img src="posters/Cube_Spark.jpg" alt="Event Poster 5">
                 <h3>Cube Spark</h3>
                 <p>Date: 02 Dec 2024</p>
             </div>
             <!-- Poster 6 -->
-            <div class="poster">
+            <div class="poster"data-date="2024-12-04">
                 <img src="posters/Robo_Soccer.jpg" alt="Event Poster 6">
                 <a href="https://forms.gle/ozLsjnRxEaar1n2o7"><h3>Robo Soccer</h3></a>
                 <p>Date: 04 Dec 2024</p>
@@ -115,5 +115,22 @@
     <footer>
         <p>&copy; 2024 navVIT. All Rights Reserved.</p>
     </footer>
+
+
+
+    <script>
+        const posters = Array.from(document.querySelectorAll('.poster'));
+    
+        // Sort the posters by their data-date attribute
+        posters.sort((a, b) => 
+            new Date(a.dataset.date) - new Date(b.dataset.date)
+        );
+    
+        // Select the poster grid container and append sorted posters
+        const container = document.querySelector('.poster-grid');
+        posters.forEach(poster => container.appendChild(poster));
+    </script>
+    
+
 </body>
 </html>
