@@ -196,4 +196,7 @@ footer {
     .full-width {
         height: auto; /* Allow full-width poster to adjust height */
     }
+    #navbar{
+        overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+        white-space: nowrap; /* Keeps links in a single line */    }
 }

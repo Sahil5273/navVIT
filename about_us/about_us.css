@@ -167,4 +167,7 @@ footer {
     ul li {
         font-size: 14px;
     }
+    #navbar{
+        overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+        white-space: nowrap; /* Keeps links in a single line */    }
 }

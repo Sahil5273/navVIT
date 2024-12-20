@@ -116,14 +116,6 @@ body {
     box-sizing: border-box; /* Include padding in the container's width */
 }
 
-/* Grid Styles (40% width with 15px margin and 100px height) */
-.grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px; /* Margin between the divs */
-    padding: 10px; /* Padding for spacing */
-    overflow-x:scroll;
-}
 /* Style for the dropdown */
 /* Hide the dropdown initially */
 /* Initially hide the dropdown */
@@ -145,30 +137,43 @@ body {
     text-align: center;
 }
 
-
-
-.card  img{
- width: 30%; /* Set width to 40% */
- height: 300px; 
- width: fit-content;
-
+/* Grid Styles */
+.grid {
+    display: flex;
+    justify-content: flex-start; /* Align items to start */
+    gap: 10px; /* Space between items */
+    padding: 10px; /* Padding around the grid */
+    overflow-x: hidden; /* Hide scrollbar for a clean look */
+    position: relative; /* Ensures proper positioning for animation */
+    width: 100%; /* Occupy full width */
 }
 
-
-
-.card {
-    width: auto; /* Set width to 40% */
-    height: 300px; 
-    /* Fixed height  */
-    background-color: #fff; 
-    /* White card background */
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(252, 252, 252, 0.2);
-    padding: 20px;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-    color:#3b5998
-    
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
+
+/* Apply animation to the grid content */
+.grid .card {
+    animation: scroll 25s linear infinite; /* 10s for full scroll, adjust as needed */
+    display: inline-block; /* Ensure cards are treated as inline elements */
+}
+
+.grid:hover .card {
+    animation-play-state: paused;
+}
+
+/* Image Styles */
+.card img {
+    width: auto; /* Maintain aspect ratio */
+    height: 300px; /* Consistent height */
+}
+
 /* 
 .card:hover {
     transform: scale(1.1);
@@ -196,15 +201,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
+/* 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .grid {
+    /* .grid {
         flex-direction: column;
         gap: 10px;
-    }
-
+    } */
+     #navbar{
+        overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+        white-space: nowrap; /* Keeps links in a single line */    }
     .card {
         width: 80%; /* Adjust width for smaller screens */
     }
-}
+} 
