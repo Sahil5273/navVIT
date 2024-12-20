@@ -147,27 +147,33 @@ body {
 
 
 
+.card  img{
+ width: 30%; /* Set width to 40% */
+ height: 300px; 
+ width: fit-content;
 
+}
 
 
 
 .card {
-    width: 40%; /* Set width to 40% */
-    height: 500px; /* Fixed height */
-    background-color: #fff; /* White card background */
+    width: auto; /* Set width to 40% */
+    height: 300px; 
+    /* Fixed height  */
+    background-color: #fff; 
+    /* White card background */
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(252, 252, 252, 0.2);
     padding: 20px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
     color:#3b5998
     
 }
-
+/* 
 .card:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 15px rgba(85, 36, 245, 0.3);
-}
+} */
 
 section{
     text-align: left;
