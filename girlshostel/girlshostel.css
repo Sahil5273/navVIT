@@ -92,7 +92,9 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}/* Details Section */
+}
+
+/* Details Section */
 #details {
     background-color: #3b5998;
     color: white;
@@ -167,20 +169,20 @@ body {
 /* Footer */
 
 footer {
-    color: #3b5998; /* Blue footer text */
-    background-color: #fff; /* White footer */
+    color: #3b5998;
+    background-color: #fff;
     text-align: center;
     padding: 2px 0;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
     border-radius: 5px;
-    position: relative;
+    position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
-    
     
 
     .grid {
