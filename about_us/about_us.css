@@ -114,7 +114,12 @@ h1 {
 
 section {
     margin-bottom: 30px;
-    color: #0a3289;
+    color: #102a63;
+}
+
+section p{
+    margin-bottom: 30px;
+    color: #010101;
 }
 /* 
 h2 {
@@ -152,7 +157,9 @@ footer {
     width: 100%;
 }
 
-
+h3{
+    text-align: center  ;
+}
 
 /* Responsive design */
 @media (max-width: 600px) {
