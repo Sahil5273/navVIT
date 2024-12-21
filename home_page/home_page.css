@@ -137,49 +137,35 @@ body {
     text-align: center;
 }
 
-/* Grid Styles */
 .grid {
     display: flex;
-    justify-content: flex-start; /* Align items to start */
-    gap: 10px; /* Space between items */
-    padding: 10px; /* Padding around the grid */
-    overflow-x: hidden; /* Hide scrollbar for a clean look */
-    position: relative; /* Ensures proper positioning for animation */
-    width: 100%; /* Occupy full width */
+    justify-content: space-between;
+    gap: 10px; /* Margin between the divs */
+    padding: 10px; /* Padding for spacing */
+    overflow-x:scroll;
 }
 
-/* Animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.card  img{
+ width: 30%; /* Set width to 40% */
+ height: 300px; 
+ width: fit-content;
+
 }
 
-/* Apply animation to the grid content */
-.grid .card {
-    animation: scroll 25s linear infinite; /* 10s for full scroll, adjust as needed */
-    display: inline-block; /* Ensure cards are treated as inline elements */
+
+
+.card {
+    width: auto; /* Set width to 40% */
+    height: 300px; 
+    /* Fixed height  */
+    background-color: #fff; 
+    /* White card background */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(252, 252, 252, 0.2);
+    padding: 20px;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    color:#3b5998
 }
-
-.grid:hover .card {
-    animation-play-state: paused;
-}
-
-/* Image Styles */
-.card img {
-    width: auto; /* Maintain aspect ratio */
-    height: 300px; /* Consistent height */
-}
-
-/* 
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 15px rgba(85, 36, 245, 0.3);
-} */
-
 section{
     text-align: left;
     font-size: smaller;
@@ -215,3 +201,8 @@ footer {
         width: 80%; /* Adjust width for smaller screens */
     }
 } 
+
+
+
+
+
