@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Details</title>
+    <link rel="stylesheet" href="girlshostel.css">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<div id="header">
+    <nav id="navbar">
+        <a href="../home_page/home_page.html">Home</a>
+        <a href="../Details/details.html">Details </a>
+        
+        <div class="dropdown" id="hostel-dropdown">
+            <a href="#" id="hostel-link">Hostel</a>
+            <div class="dropdown-content" id="hostel-options">
+                <a href="#">Girl's Hostel</a>
+                <a href="../boyshostel/boyshostel.html">Boy's Hostel</a>
+            </div>
+        </div>
+    
+        <a href="../club/club.html">Clubs</a>
+        <a href="../about_us/about_us.html">About Us</a>
+        <a href="../contact_us/contact_us.html">Contact </a>
+
+
+       
+        
+        
+</nav>
+
+<!-- Details Section -->
+<div id="details">
+    <h1>HOSTEL DETAILS</h1>
+</div>
+
+<!-- Poster Grid Section -->
+<div class="grid">
+    <div class="card">
+        <img src="img/gbh1.png" alt="Poster 1">
+        <p>Details about Poster 1</p>
+    </div>
+
+    <div class="card">
+        <img src="img/gbh2.png" alt="Poster 2">
+        <p>Details about Poster 2</p>
+    </div>
+
+
+
+</div>
+
+<!-- Footer Section -->
+<footer id="foot">
+    <p>&copy; 2024 navVIT. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript for Hostel Dropdown -->
+<script>
+    const hostelLink = document.getElementById('hostel-link');
+    const hostelOptions = document.getElementById('hostel-options');
+    
+    hostelLink.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        hostelOptions.classList.toggle('show');  // Toggle professional dropdown
+    });
+    
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!hostelDropdown.contains(e.target)) {
+            hostelOptions.classList.remove('show');
+        }
+    });
+</script>
+
+</body>
+</html>

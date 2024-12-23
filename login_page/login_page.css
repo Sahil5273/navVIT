@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Fix to the top */
+    left: 0; /* Ensure it stretches across the entire width */
+    width: 100%; /* Make it span the entire width */
+    z-index: 1000; /* Ensure it's above other content */
+    background-image:url("image4.png");
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-top: 80px; /* Space for the fixed header */
+}
+
+.login-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #3b5998;
+    margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #ff6b6b;
+}
+
+.login-form p {
+    margin: 15px 0 0;
+    color: #555;
+}
+
+.login-form a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    color: #ff6b6b;
+}
+
+footer {
+    background-color: #3b5998;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

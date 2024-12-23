@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Details</title>
+    <link rel="stylesheet" href="boyshostel.css">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<div id="header">
+    <nav id="navbar">
+        <a href="../home_page/home_page.html">Home</a>
+        <a href="../Details/details.html">Details </a>
+        
+        <div class="dropdown" id="hostel-dropdown">
+            <a href="#" id="hostel-link">Hostel</a>
+            <div class="dropdown-content" id="hostel-options">
+                <a href="../girlshostel/girlhostel.html">Girl's Hostel</a>
+                <a href="#">Boy's Hostel</a>
+            </div>
+        </div>
+    
+        <a href="../club/club.html">Clubs</a>
+        <a href="../about_us/about_us.html">About Us</a>
+        <a href="../contact_us/contact_us.html">Contact </a>
+    </nav>
+</div>
+
+<!-- Details Section -->
+<div id="details">
+    <h1>HOSTEL DETAILS</h1>
+</div>
+
+<!-- Poster Grid Section -->
+<div class="grid">
+    <div class="card" data-details="<p><strong>Mr. Sanjay Pawar:</strong> 24 hours | Week-off day: Thursday</p>
+        <p><strong>Mr. Satish Verma:</strong> 10:00 AM to 6:00 PM | Week-off day: Tuesday</p>
+        <p><strong>Mr. Akhalesh Vishwakarma:</strong> 2:00 PM to 10:00 PM | Week-off day: Friday</p>">
+        <img src="hostel/bh1.jpg" alt="Poster 1">
+        <p>Boys Hostel Block 1</p>
+    </div>
+
+    <div class="card" data-details="<p><strong>Mr. Tarun Girothiya:</strong> 8:00 AM to 4:00 PM | Week-off day: Saturday</p>
+        <p><strong>Mr. Shubham:</strong> 2:00 PM to 10:00 PM | Week-off day: Wednesday</p>">
+        <img src="hostel/bh2.jpg" alt="Poster 2">
+        <p>Boys Hostel Block 2</p>
+    </div>
+
+    <div class="card" data-details="<p><strong>Mr. Shriram Namdev:</strong> 24 hours | Week-off day: Friday</p>">
+        <img src="hostel/bh3.jpg" alt="Poster 3">
+        <p>Boys Hostel Block 3</p>
+    </div>
+
+    <div class="card" data-details="<p><strong>Mr. Manohar Singh:</strong> 10:00 AM to 6:00 PM | Week-off day: Monday</p>
+        <p><strong>Mr. Amit Tyagi:</strong> 8:30 AM to 4:30 PM | Week-off day: Sunday</p>">
+        <img src="hostel/bh4.jpg" alt="Poster 4">
+        <p>Boys Hostel Block 4</p>
+    </div>
+
+    <div class="card" data-details="<p><strong>Mr. Deepak Mewara:</strong> 2:00 PM to 10:00 PM | Week-off day: Monday</p>">
+        <img src="hostel/bh5.jpg" alt="Poster 5">
+        <p>Boys Hostel Block 5</p>
+    </div>
+
+    <div class="card" data-details="<p><strong>Mr. Bhupwan Singh:</strong> 2:00 PM to 10:00 PM | Week-off day: Monday</p>
+        <p><strong>Mr. Vishnu Verma:</strong> 24 Hours | Week-off day: Wednesday</p>"><img src="hostel/bh6.png"alt="Poster 6">
+        <p>Boys Hostel Block 6</p>
+    </div>
+
+    <div class="card full-width" data-details="The Boys Hostel Central Office oversees all administrative operations, ensuring a smooth hostel experience for students.">
+        <img src="hostel/COB.jpg" alt="Poster 7">
+        <p>Boys Hostel Central Office</p>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer id="foot">
+    <p>&copy; 2024 navVIT. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript for Hostel Details -->
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const details = card.getAttribute('data-details');
+            card.innerHTML = `
+                <p>${details}</p>
+                <button class="restore-btn">Back to Image</button>
+            `;
+
+            const restoreBtn = card.querySelector('.restore-btn');
+            restoreBtn.addEventListener('click', () => {
+                location.reload(); // Reload page to restore original state
+            });
+        });
+    });
+
+    // Dropdown Functionality
+    const hostelLink = document.getElementById('hostel-link');
+    const hostelOptions = document.getElementById('hostel-options');
+
+    hostelLink.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        hostelOptions.classList.toggle('show');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!hostelLink.contains(e.target) && !hostelOptions.contains(e.target)) {
+            hostelOptions.classList.remove('show');
+        }
+    });
+</script>
+
+</body>
+</html>

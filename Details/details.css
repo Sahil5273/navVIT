@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b5998;;
+    margin: 0; 
+    padding: 0;
+}
+
+
+/* Navbar Styles */
+#navbar {
+    background-color: white; /* White navbar */
+    display: flex;
+    justify-content: flex-start; /* Move navbar items to the left */
+    align-items: center;
+    padding: 0 15px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+/* Navbar Link Styles */
+#navbar a {
+    color: #3b5998; /* Blue text for links */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+#hostel-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f5;
+    color: #0044cc;
+}
+
+/* Show Dropdown on Click */
+.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+/* for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Hover Effect Update */
+#navbar a:hover {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+.container {
+    padding: 20px;
+    margin: auto;
+    margin-top: 80px; /* Adjusted for fixed navbar */
+    max-width: 1400px;
+    box-sizing: border-box;
+    margin-bottom:10%;
+}
+
+section {
+    background-color: #f0f0f5;
+    padding: 20px; /* Increased padding */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+
+h1 {
+    color: #fdfdfd;
+    /* text-decoration-line: underline; */
+    text-align: center;
+}
+
+
+.sec2{
+    background-color: #000000;
+    /* height: 890px; */
+    padding: 5px;
+    color: #e7e7ee;
+    text-align: center;
+    
+}
+/* 
+h2 {
+    color: #3b5998;
+    text-decoration: underline;
+} */
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+
+footer {
+    color: #3b5998;
+    background-color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: auto;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    section h2 {
+        font-size: 18px;
+    }
+    
+    ul li {
+        font-size: 14px;
+    }
+    #navbar{
+        overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+        white-space: nowrap; /* Keeps links in a single line */    }
+}
+
+
+
+/* for question answer toggle */
+.question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+  }
+  .answer {
+    display: none;
+    padding: 10px;
+    background-color: #fafafa;
+    border-left: 3px solid #007BFF;
+  }
+  .question.active + .answer {
+    display: block;
+  }

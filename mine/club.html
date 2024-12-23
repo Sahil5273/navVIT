@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='club.css'>
+    <script src='main.js'></script>
+    <body>
+</head>
+<div id="header">
+    <nav id="navbar">
+        <a href="#">Home</a>
+        
+        <div class="dropdown" id="hostel-dropdown">
+            <a href="#" id="hostel-link">Hostel</a>
+            <div class="dropdown-content" id="hostel-options">
+                <a href="#">Girl's Hostel</a>
+                <a href="#">Boy's Hostel</a>
+            </div>
+        </div>
+        
+        
+        <a href="#">Clubs</a>
+        <a href="#">Details</a>
+        <a href="#">About Us</a>
+        <a href="#">Events</a>
+    </nav>
+</div>
+<div id="head">CHECKOUT THE EVENTS</div>
+<div id="main">
+    <div class="ps">
+
+    </div>
+    <div class="ps">
+        
+    </div>
+    <div class="ps">
+        
+    </div>
+    <div class="ps">
+        
+    </div>
+    <div class="ps">
+        
+    </div>
+    <div class="ps">
+        
+    </div>
+</div>
+<script>
+    const hostelLink = document.getElementById('hostel-link');
+    const hostelOptions = document.getElementById('hostel-options');
+    
+    hostelLink.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        hostelOptions.classList.toggle('show');  // Toggle professional dropdown
+    });
+    
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!hostelDropdown.contains(e.target)) {
+            hostelOptions.classList.remove('show');
+        }
+    });
+    
+</script>
+</body>
+</html>

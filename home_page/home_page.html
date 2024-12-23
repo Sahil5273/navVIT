@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home_page.css">
+    <title>navVIT</title>
+    <body>
+</head>
+<div id="header">
+    <nav id="navbar">
+        <a href="../home_page/home_page.html ">Home</a>
+        <a href="../Details/details.html">Details </a>
+
+        <div class="dropdown" id="hostel-dropdown">
+            <a href="#" id="hostel-link">Hostel</a>
+            <div class="dropdown-content" id="hostel-options">
+                <a href="../girlshostel/girlhostel.html">Girl's Hostel</a>
+                <a href="../boyshostel/boyshostel.html">Boy's Hostel</a>
+            </div>
+            <a href="../club/club.html">Clubs</a>
+            <a href="../about_us/about_us.html">About Us</a>
+            <a href="../contact_us/contact_us.html">Contact</a>
+        </div>
+        
+       
+        
+    </nav>
+</div>
+
+
+        
+    <div class="container">
+        <h1>Welcome to navVIT!</h1>
+        <img src="img4.png" alt="Mascot" id="mascot">
+        <p>Discover events, join clubs, and make the most of your college life with navVIT.</p>
+       <p id="event">Upcoming Events</p>
+        <div class="grid">
+            <div class="card"><img src="img/cricket_trnmnt.jpg" alt=""></div>
+            <div class="card"><img src="img/volleyball_tournament.jpg" alt=""></div>
+            <div class="card"><img src="img/football_tournament.jpg" alt=""> </div>
+            <div class="card"><img src="img/basketball_tounament.jpg" alt=""></div>
+            <div class="card"><img src="img/badminton_tournament.jpg" alt=""></div>
+            <div class="card"><img src="img/chess_tournament.jpg" alt=""></div>
+            <div class="card"><img src="img/tennis_trnmt.jpg" alt=""></div>
+
+
+            
+                
+            </div>
+             
+        </div>
+        
+    </div>
+    <section>
+        <h3><a href=https://forms.gle/hJWv6myeo9Am1j397 >Report Bugs</a></h3>
+        </section>
+    <footer>
+        <a>2024 navVIT. All Rights  Reserved.</a>
+    </footer>
+
+    
+
+
+
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/27/11/20241027115158-2F0FD88D.js"></script>
+
+<script>
+    const hostelLink = document.getElementById('hostel-link');
+    const hostelOptions = document.getElementById('hostel-options');
+    
+    hostelLink.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        hostelOptions.classList.toggle('show');  // Toggle professional dropdown
+    });
+    
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!hostelDropdown.contains(e.target)) {
+            hostelOptions.classList.remove('show');
+        }
+    });
+    
+</script>
+
+    
+    
+    
+</body>
+</html>

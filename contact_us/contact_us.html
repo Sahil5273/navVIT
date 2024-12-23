@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact_us.css">
+    <title>Contact Us - navVIT</title>
+</head>
+<body>
+    <div id="header">
+        <nav id="navbar">
+            <a href="../home_page/home_page.html ">Home</a>
+            <a href="../Details/details.html">Details </a>
+
+            <div class="dropdown" id="hostel-dropdown">
+                <a href="#" id="hostel-link">Hostel</a>
+                <div class="dropdown-content" id="hostel-options">
+                    <a href="../girlshostel/girlhostel.html">Girl's Hostel</a>
+                    <a href="../boyshostel/boyshostel.html">Boy's Hostel</a>
+                </div>
+                <a href="../club/club.html">Clubs</a>
+                <a href="../about_us/about_us.html">About Us</a>
+                <a href="../contact_us/contact_us.html">Contact</a>
+            </div>
+            
+           
+            
+        </nav>
+    </div>
+    
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need further information, feel free to reach out to any of our team members.</p>
+
+        <section>
+            <h2>Our Team</h2>
+            <ul class="team-list">
+                <li>Sahil Kumar - 23bai10224@vitbhopal.ac.in</li>
+                <li>Vishal Sharma - 23bai11322@vitbhopal.ac.in</li>
+                <li>Vidit Kumar Singh - 23bai10196@vitbhopal.ac.in</li>
+                <li>Sneha Mandal - 23bai10659@vitbhopal.ac.in</li>
+                <li>Anushka Yadav - 23bai10168@vitbhopal.ac.in</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>College Official Websites:</h2>
+            <p>VIT Bhopal: <a href="https://vitbhopal.ac.in/">@vitbhopal.ac.in</a></p>
+            <p>VTOP: <a href="https://vtop.vitbhopal.ac.in/vtop/open/page" target="_blank">@vtop.vitbhopal.ac.in</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/vit.bhopal/" target="_blank">@vitbhopal.instapage</a></p>
+            
+
+        <section >
+            <h2>Our Location</h2>
+            <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5358693949966!2d76.8512871!3d23.077471499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397ce9ceaaaaaaab%3A0xa224b6b82b421f83!2sVIT%20Bhopal%20University!5e0!3m2!1sen!2sin!4v1729849647784!5m2!1sen!2sin"width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        
+
+
+        
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 navVIT. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        const hostelLink = document.getElementById('hostel-link');
+        const hostelOptions = document.getElementById('hostel-options');
+
+        hostelLink.addEventListener('click', (e) => { 
+             e.preventDefault();
+             hostelOptions.classList.toggle('show'); // Toggle the dropdown
+          });
+
+           // Close dropdown if clicked outside
+        document.addEventListener('click', (e) => {
+                  // Check if the click is outside both the link and the dropdown content
+                   if (!hostelLink.contains(e.target) && !hostelOptions.contains(e.target)) {
+                      hostelOptions.classList.remove('show');
+                   }
+           });
+
+        
+    </script>
+</body>
+</html>

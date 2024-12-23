@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b5998; /* Darker blue background */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove padding */
+    color: #fff; /* Default text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: white; /* White navbar */
+    display: flex;
+    justify-content: flex-start; /* Move navbar items to the left */
+    align-items: center;
+    padding: 0 15px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+/* Navbar Link Styles */
+#navbar a {
+    color: #3b5998; /* Blue text for links */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+#hostel-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f5;
+    color: #0044cc;
+}
+
+/* Show Dropdown on Click */
+.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Hover Effect Update */
+#navbar a:hover {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+#head{
+    background-color:#3b5998; 
+    color :white;
+    font-size: medium;
+    font-style: normal;
+    height:80px;
+    margin-top: 50px;
+    text-align: center;
+    height: auto;
+}
+.main{
+    margin-top:90px;
+    background-color: #3b5998;
+    padding:20px;
+
+
+}
+.ps{
+    background-color: white;
+    padding: 20px;
+    height: 50px;
+    width: 180px;
+}

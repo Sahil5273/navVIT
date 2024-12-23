@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b5998;;
+    margin: 0; 
+    padding: 0;
+}
+
+
+/* Navbar Styles */
+#navbar {
+    background-color: white; /* White navbar */
+    display: flex;
+    justify-content: flex-start; /* Move navbar items to the left */
+    align-items: center;
+    padding: 0 15px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+/* Navbar Link Styles */
+#navbar a {
+    color: #3b5998; /* Blue text for links */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+#hostel-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f5;
+    color: #0044cc;
+}
+
+/* Show Dropdown on Click */
+.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Hover Effect Update */
+#navbar a:hover {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+ div h1 {
+    color: #ffffff;
+    /* text-decoration-line: underline; */
+    text-align: center;
+}
+
+header h1, header p{
+    color: #000000;
+    text-decoration-line: underline;
+}
+
+h2 {
+    color: #122e6b;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+ul.team-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.team-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.location{
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    
+}
+
+/* .hover{
+    transform-box: border-box;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+} */
+
+
+footer {
+    color: #3b5998; /* Blue footer text */
+    background-color: #fff; /* White footer */
+    text-align: center;
+    padding: 0.5px 0;
+    margin-top: auto; /* Push footer to the bottom */
+    border-radius: 5px;
+    
+   
+
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    section h2 {
+        font-size: 18px;
+    }
+    
+    ul.team-list li {
+        font-size: 14px;
+    }
+    #navbar{
+        overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+        white-space: nowrap; /* Keeps links in a single line */    }
+}
+

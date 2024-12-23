@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b5998; /* Darker blue background */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove padding */
+    color: #fff; /* Default text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: white; /* White navbar */
+    display: flex;
+    justify-content: flex-start; /* Move navbar items to the left */
+    align-items: center;
+    padding: 0 15px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+/* Navbar Link Styles */
+#navbar a {
+    color: #3b5998; /* Blue text for links */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+#hostel-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f5;
+    color: #0044cc;
+}
+
+/* Show Dropdown on Click */
+.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Hover Effect Update */
+#navbar a:hover {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+#event{
+    font-size:30px;
+    font-style: italic;
+    font-weight: bold;
+    margin-right:1400px;
+
+}
+
+/* Content Styles */
+.container {
+    margin-top: 70px; /* Adjusted for fixed navbar */
+    padding: 20px;
+    text-align: center;
+    height: auto;
+    box-sizing: border-box; /* Include padding in the container's width */
+}
+
+/* Style for the dropdown */
+/* Hide the dropdown initially */
+/* Initially hide the dropdown */
+.hidden {
+    display: none;
+}
+/* Poster 3 Card */
+/* Poster 3 Card */
+/* Poster 3 Styling */
+/* Poster 3 Card */
+#mascot{
+    width:200px;
+
+}
+
+/* Adjust container for relative positioning */
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Margin between the divs */
+    padding: 10px; /* Padding for spacing */
+    overflow-x:scroll;
+}
+
+.card  img{
+ width: 30%; /* Set width to 40% */
+ height: 300px; 
+ width: fit-content;
+
+}
+
+
+
+.card {
+    width: auto; /* Set width to 40% */
+    height: 300px; 
+    /* Fixed height  */
+    background-color: #fff; 
+    /* White card background */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(252, 252, 252, 0.2);
+    padding: 20px;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    color:#3b5998
+}
+section{
+    text-align: left;
+    font-size: smaller;
+    color: aliceblue;
+    
+    
+
+
+}
+/* Footer Styles */
+footer {
+    color: #3b5998;
+    background-color: #fff; /* White footer */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Push footer to the bottom */
+    border-radius: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* 
+/* Responsive Design */
+@media (max-width: 600px) {
+    /* .grid {
+        flex-direction: column;
+        gap: 10px;
+    } */
+     #navbar{
+        overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+        white-space: nowrap; /* Keeps links in a single line */    }
+    
+} 
+
+
+
+
+
